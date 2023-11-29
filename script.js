@@ -68,9 +68,20 @@ console.log(hamster.getPrice());
 // "created person class"
 // Easy Mode Keep Going and save and run code
 
+class Person {
+  constructor(name) {
+    this.name = name;
+    this.age = 0;
+    this.height = 0;
+    this.weight = 0;
+    this.mood = 0;
+    this.hamsters = [];
+    this.bankAccount = 0;
+  };
+};
 
-
-
+const john = new Person("John");
+console.log(john);
 
 
 
