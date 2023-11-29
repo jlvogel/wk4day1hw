@@ -85,6 +85,20 @@ class Person {
   getWeight() {return this.weight;};
   greet() {console.log(`Hello ${this.name}!`);};
   eat() {this.weight++; this.mood++;};
+  exercise() {this.weight--;};
+  ageUp() {
+    this.age++;
+    this.height++;
+    this.weight++;
+    this.mood--;
+    this.bankAccount+=10;
+  };
+  buyHamster(hamster){
+    this.hamsters.push(hamster);
+    this.mood+=10;
+    this.bankAccount-=hamster.getPrice();
+    hamster.owner = this.name
+  };
 };
 
 const john = new Person("John");
@@ -94,6 +108,12 @@ console.log(john.getAge());
 console.log(john.getWeight());
 john.greet();
 john.eat();
+console.log(john);
+john.exercise();
+console.log(john);
+john.ageUp();
+console.log(john);
+john.buyHamster(hamster);
 console.log(john);
 
 // Create a Story with your Person class
