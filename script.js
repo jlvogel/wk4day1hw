@@ -78,12 +78,23 @@ class Person {
     this.hamsters = [];
     this.bankAccount = 0;
   };
+  getName() {
+    return this.name;
+  };
+  getAge() {return this.age;};
+  getWeight() {return this.weight;};
+  greet() {console.log(`Hello ${this.name}!`);};
+  eat() {this.weight++; this.mood++;};
 };
 
 const john = new Person("John");
 console.log(john);
-
-
+console.log(john.getName());
+console.log(john.getAge());
+console.log(john.getWeight());
+john.greet();
+john.eat();
+console.log(john);
 
 // Create a Story with your Person class
 // Feel free to update or add methods to automate some of these tasks.
