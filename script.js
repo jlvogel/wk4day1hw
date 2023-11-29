@@ -22,10 +22,22 @@ class Hamster {
     this.name = name;
     this.price = 15;
   };
+  wheelRun() {
+    console.log("squeak squeak");
+  }
+  eatFood() {
+    console.log("nibble nibble")
+  }
+  getPrice() {
+    return this.price
+  }
 };
 
-const hamster = new Hamster("Charles")
-console.log(hamster)
+const hamster = new Hamster("Charles");
+console.log(hamster);
+hamster.wheelRun();
+hamster.eatFood();
+console.log(hamster.getPrice());
 
 
 
