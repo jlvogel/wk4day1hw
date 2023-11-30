@@ -226,8 +226,10 @@ class Dinner {
 class Chef {
   constructor(name) {
     this.name = name;
+    this.dinnersMade = [];
   };
   makeDinner(appetizer, entree, dessert) {
+    this.dinnersMade.push(new Dinner(appetizer, entree, dessert));
     return new Dinner(appetizer, entree, dessert);
   };
 };
@@ -236,4 +238,5 @@ const leon = new Chef("Leon");
 console.log(leon.makeDinner("Salad", "Spaghetti", "Chocolate Cake"));
 console.log(leon.makeDinner("breadsticks", "pizza", "cookie"));
 console.log(leon.makeDinner("fried pickles", "hamburger", "ice cream"));
+console.log(leon);
 
