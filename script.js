@@ -135,6 +135,66 @@ console.log(john);
 // "created timmys story" Easy Mode Keep Going Save and Run Code
 
 
+const timmy = new Person("Timmy");
+// Age Timmy five years
+// for(let year = 0; year <= 5; year++) {
+//   timmy.ageUp();
+// };
+// //Have Timmy eat five times
+// for (let eat = 0; eat <= 5; eat++) {
+//   timmy.eat();
+// }
+// //Have 
+
+// yeah originally I was going to just make for loops
+// but why not just make a function that runs a
+// number of times then just call that function as needed.
+
+const numTimes = (obj, method, num)=>{
+  for(let i = 1; i <= num; i++) {
+    obj[method]();
+  };
+};
+// It works!!!  
+
+// Age Timmy five years
+numTimes(timmy, "ageUp", 5);
+console.log(timmy);
+
+// Timmy eats five times
+numTimes(timmy, "eat", 5);
+console.log(timmy);
+
+// Timmy exercises five times
+numTimes(timmy, "exercise", 5);
+console.log(timmy);
+
+// Age Timmy nine years
+numTimes(timmy, "ageUp", 9);
+console.log(timmy);
+
+// Create a hamster named "Gus"
+const gus = new Hamster("Gus");
+console.log(gus);
+
+// Set Gus's owner to the string "Timmy"
+// note this will automatically happen when Timmy
+// buys Gus.
+
+// Have Timmy "buy" Gus
+timmy.buyHamster(gus);
+console.log(timmy);
+
+// Age Timmy 15 years
+numTimes(timmy, "ageUp", 15);
+console.log(timmy);
+
+// Have Timmy eat twice
+numTimes(timmy,"eat", 2);
+
+// Have Timmy exercise twice
+numTimes(timmy,"exercise", 2);
+console.log(timmy);
 
 
 // Chef Make Dinners
