@@ -215,4 +215,25 @@ console.log(timmy);
 // Your commit message should read something like:
 // "Dinner is served" Easy Mode Keep Going Save and Run Your Code
 
-// Copyright © Per Scholas 2023
+class Dinner {
+  constructor(appetizer, entree, dessert) {
+    this.appetizer = appetizer;
+    this.entree = entree;
+    this.dessert = dessert;
+  };
+};
+
+class Chef {
+  constructor(name) {
+    this.name = name;
+  };
+  makeDinner(appetizer, entree, dessert) {
+    return new Dinner(appetizer, entree, dessert);
+  };
+};
+
+const leon = new Chef("Leon");
+console.log(leon.makeDinner("Salad", "Spaghetti", "Chocolate Cake"));
+console.log(leon.makeDinner("breadsticks", "pizza", "cookie"));
+console.log(leon.makeDinner("fried pickles", "hamburger", "ice cream"));
+
