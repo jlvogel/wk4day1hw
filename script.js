@@ -229,8 +229,9 @@ class Chef {
     this.dinnersMade = [];
   };
   makeDinner(appetizer, entree, dessert) {
-    this.dinnersMade.push(new Dinner(appetizer, entree, dessert));
-    return new Dinner(appetizer, entree, dessert);
+    const dinner = new Dinner(appetizer, entree, dessert);
+    this.dinnersMade.push(dinner);
+    return dinner;
   };
 };
 
